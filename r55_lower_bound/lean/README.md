@@ -45,8 +45,16 @@ The verification is computational:
 
 | Bound | Source | Python Status | Lean Status |
 |-------|--------|---------------|-------------|
-| R(5,5) ≥ 38 | P(37) | ✓ Verified | Skeleton with `sorry` |
-| R(5,5) ≥ 43 | Exoo 1989 | Search in progress | Not started |
+| R(5,5) ≥ 30 | P(29) | ✓ Verified (0 red K5s, 0 blue K5s) | Not started |
+| R(5,5) ≥ 38 | P(37) | ✓ Verified (0 red K5s, 0 blue K5s) | Skeleton with `sorry` |
+| R(5,5) ≥ 43 | Exoo 1989 | Literature reference | Not started |
+
+### Key Findings
+
+- **P(37) is (5,5)-free**: Exhaustive check of all 435,897 5-subsets confirms 0 monochromatic K5s
+- **P(41) is NOT (5,5)-free**: Has 205 red K5s and 205 blue K5s
+- **P(43) is NOT (5,5)-free**: Has 316 red K5s and 1064 blue K5s
+- The R(5,5) ≥ 43 bound requires graphs that are NOT Paley graphs
 
 ## References
 
