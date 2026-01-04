@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "r55-lower-bound"
+version = "0.1.0"
+description = "Investigation of R(5,5) lower bound"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.20.0",
+    "pytest>=7.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+sat = [
+    "python-sat>=0.1.8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
